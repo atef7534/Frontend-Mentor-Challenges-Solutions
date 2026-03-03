@@ -11,6 +11,7 @@ body {
   align-items: center;
   min-height: 100vh;
   font-size: 14px;
+  position: relative;
 }
 
 /* Global variables */
@@ -35,7 +36,6 @@ body {
   width: 60px;
   border-radius: 50%;
   margin: 15px auto;
-  
 }
 
 #name {
@@ -71,4 +71,33 @@ body {
   line-height: 1.3;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 50px;
+  font-size: 1.1rem;
+  font-family: "Inter", sans-serif;
+  text-align: center;
+  color: white;
+}
+
+@media screen and (max-width: 767px) {
+  .attribution {
+    font-size: 0.9rem;
+    padding: 10px;
+    bottom: 25px;
+  }
+}
+
+.attribution a {
+  text-decoration: none;
+}
+
+.attribution a:first-child {
+  color: rgb(85, 150, 249);
+}
+
+.attribution a:last-child {
+  color: #fa6c6c;
 }
