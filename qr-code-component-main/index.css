@@ -38,6 +38,8 @@ img {
   max-width: 300px;
   background-color: white;
   border-radius: 12px;
+  border-radius: 20px;
+  box-shadow: 0 6px 13px -8px #bcb9b9;
 }
 
 #title {
