@@ -1,188 +1,149 @@
-# Frontend Mentor - Typing Speed Test Solution
+# Frontend Mentor Challenge Solutions
 
-This is my solution to the [Typing Speed Test challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/typing-speed-test).
+A collection of my solutions to challenges from [Frontend Mentor](https://www.frontendmentor.io/), built to practice and strengthen my frontend development skills through realistic, design-focused projects.
 
-The project is a responsive typing speed test built with semantic HTML, CSS, and vanilla JavaScript. Users can choose a difficulty level and test mode, type a randomly selected passage, and see their WPM, accuracy, and elapsed time in real time.
+Each challenge is implemented from the provided design and includes its own source code, assets, and project-specific README.
 
-## Table of contents
+## 🚀 Projects
 
-- [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
-  - [AI Collaboration](#ai-collaboration)
-- [Author](#author)
-- [Acknowledgments](#acknowledgments)
+| Project | Preview | Technologies | Live Demo | Source Code | Challenge |
+| --- | --- | --- | --- | --- | --- |
+| **Social Links Profile** | ![Social Links Profile](./social-links-profile-main/preview.jpg) | HTML, CSS | [Live](https://atef7534.github.io/Frontend-Mentor-Challenges-Solutions/social-links-profile-main/) | [Code](./social-links-profile-main/) | [Challenge](https://www.frontendmentor.io/challenges/social-links-profile-ec5e2e9a6b) |
+| **QR Code Component** | ![QR Code Component](./qr-code-component-main/preview.jpg) | HTML, CSS | [Live](https://atef7534.github.io/Frontend-Mentor-Challenges-Solutions/qr-code-component-main/) | [Code](./qr-code-component-main/) | [Challenge](https://www.frontendmentor.io/challenges/qr-code-component-iux_sIO_H) |
+| **Blog Preview Card** | ![Blog Preview Card](./blog-preview-card-main/preview.jpg) | HTML, CSS | [Live](https://atef7534.github.io/Frontend-Mentor-Challenges-Solutions/blog-preview-card-main/) | [Code](./blog-preview-card-main/) | [Challenge](https://www.frontendmentor.io/challenges/blog-preview-card-HJ_0pTmQG) |
+| **Order Summary Component** | ![Order Summary Component](./order-summary-component-main/preview.jpg) | HTML, CSS | [Live](https://atef7534.github.io/Frontend-Mentor-Challenges-Solutions/order-summary-component-main/) | [Code](./order-summary-component-main/) | [Challenge](https://www.frontendmentor.io/challenges/order-summary-component-QlPmajDUj) |
+| **Results Summary Component** | ![Results Summary Component](./results-summary-component-main/screenshot.png) | HTML, CSS | [Live](https://atef7534.github.io/Frontend-Mentor-Challenges-Solutions/results-summary-component-main/) | [Code](./results-summary-component-main/) | [Challenge](https://www.frontendmentor.io/challenges/results-summary-component-CE_K6s0maV) |
+| **Typing Speed Test** | ![Typing Speed Test](./typing-speed-test-main/preview.jpg) | HTML, CSS, JavaScript | [Live](https://atef7534.github.io/Frontend-Mentor-Challenges-Solutions/typing-speed-test-main/) | [Code](./typing-speed-test-main/) | [Challenge](https://www.frontendmentor.io/challenges/typing-speed-test) |
 
-## Overview
+## 📚 About the Repository
 
-### The challenge
+The purpose of this repository is to document my progress as I work through frontend challenges and to keep my implementations organized in one place.
 
-The goal of this challenge was to build a typing speed test application that closely follows the provided Frontend Mentor design while implementing the required interactions and responsive behavior.
+The projects range from simple component-based layouts to interactive JavaScript applications. As the collection grows, I will continue adding new challenges and improving previous implementations.
 
-Users should be able to:
+### Current Focus
 
-- Start a typing test by clicking the start button or the passage.
-- Select a difficulty level: Easy, Medium, or Hard.
-- Switch between `Timed (60s)` and `Passage` modes.
-- Restart the test and receive a new random passage.
-- See WPM, accuracy, and time update while typing.
-- Receive visual feedback for correct and incorrect characters.
-- Use backspace to correct mistakes.
-- View their personal best score.
-- Keep their personal best score between sessions using `localStorage`.
-- Use the interface comfortably across different screen sizes.
+- Writing semantic and maintainable HTML
+- Building responsive layouts
+- Improving CSS layout and styling skills
+- Practicing Flexbox and CSS Grid
+- Working with JavaScript and the DOM
+- Handling user interactions and events
+- Building reusable and readable functions
+- Working with browser APIs such as `localStorage` and `fetch`
+- Improving accessibility and responsive design
 
-The passage data is stored in a local `data.json` file and is loaded dynamically based on the selected difficulty.
+## 🛠️ Technologies
 
-### Screenshot
+The technologies used across the repository include:
 
-![Typing Speed Test preview](./preview.jpg)
-
-### Links
-
-- **Solution / Repository:** [GitHub Repository](https://github.com/atef7534/Frontend-Mentor-Challenges-Solutions/tree/main/typing-speed-test-main)
-- **Live Site:** [GitHub Pages](https://atef7534.github.io/Frontend-Mentor-Challenges-Solutions/typing-speed-test-main/)
-- **Frontend Mentor Challenge:** [Typing Speed Test](https://www.frontendmentor.io/challenges/typing-speed-test)
-- **Main Repository:** [Frontend Mentor Challenges Solutions](https://github.com/atef7534/Frontend-Mentor-Challenges-Solutions)
-
-## My process
-
-### Built with
-
-- Semantic HTML5
+- HTML5
 - CSS3
-- CSS custom properties
+- JavaScript (ES6+)
 - Flexbox
-- Responsive design with CSS media queries
-- Vanilla JavaScript (ES6+)
+- CSS Grid
+- CSS custom properties
+- Responsive design
 - DOM manipulation
-- Event listeners
+- Event handling
 - Fetch API
 - Local JSON data
 - Browser `localStorage`
-- JavaScript timers with `setInterval()`
+- JavaScript timers
 
-### What I learned
+The exact technologies used by each project are listed in the project table above and in its individual README.
 
-This project gave me practical experience with DOM manipulation and handling a more interactive JavaScript application.
+## 📂 Repository Structure
 
-#### Working with the DOM
-
-I created and updated elements dynamically instead of keeping every character of the typing passage directly in the HTML.
-
-For example, each character is represented by a `<span>` element so its state can be updated while the user is typing:
-
-```js
-const span = document.createElement("span");
-
-span.className = "letter";
-span.textContent = letter;
+```text
+Frontend-Mentor-Challenges-Solutions/
+│
+├── social-links-profile-main/
+├── qr-code-component-main/
+├── blog-preview-card-main/
+├── order-summary-component-main/
+├── results-summary-component-main/
+├── typing-speed-test-main/
+│
+└── README.md
 ```
 
-This made it possible to apply different states such as `correct`, `wrong`, and `active`.
+Each project folder is self-contained and may include:
 
-#### Handling keyboard input
+- HTML files
+- CSS files
+- JavaScript files
+- Images and other assets
+- Design references
+- Project-specific README
+- Style guide
 
-I learned how to use the `input` event and `InputEvent` properties to determine what the user typed and when they pressed backspace.
+## 💡 Featured Project: Typing Speed Test
 
-```js
-hiddenInput.addEventListener("input", function (event) {
-    handleInput(event, passage, letterSpans);
-});
-```
+The Typing Speed Test is currently the most interactive project in this collection.
 
-#### Calculating WPM and accuracy
+It includes:
 
-The application calculates WPM from the number of correct characters and the elapsed time:
+- Easy, Medium, and Hard difficulty levels
+- Timed 60-second mode
+- Passage mode
+- Random passage selection from `data.json`
+- Real-time WPM calculation
+- Real-time accuracy calculation
+- Correct and incorrect character feedback
+- Backspace support
+- Restart functionality
+- Personal best score stored using `localStorage`
+- JavaScript timers and DOM manipulation
 
-```js
-const wpm =
-    (correctCharacters / 5) /
-    (elapsedTime / 60);
-```
+[View Typing Speed Test](./typing-speed-test-main/) · [Live Demo](https://atef7534.github.io/Frontend-Mentor-Challenges-Solutions/typing-speed-test-main/)
 
-Accuracy is calculated from the number of correct characters compared with the number of attempted characters.
+## 🧠 What I'm Learning
 
-#### Working with timers
+Working through these challenges helps me practice turning a static design into a working interface.
 
-The application supports both a 60-second countdown and a passage mode with a count-up timer. I practiced using `setInterval()` and stopping timers with `clearInterval()` when the test finishes.
+Some of the main skills I'm developing are:
 
-#### Using localStorage
+1. Translating designs into semantic HTML.
+2. Building responsive layouts from mobile and desktop designs.
+3. Creating reusable CSS patterns.
+4. Understanding layout systems such as Flexbox and Grid.
+5. Managing DOM elements and user interactions with JavaScript.
+6. Organizing JavaScript logic into small, maintainable functions.
+7. Debugging frontend issues and improving code quality.
+8. Building projects that are closer to real-world frontend workflows.
 
-The personal best score is stored in the browser so it remains available after refreshing or reopening the page:
+## 🤖 AI Collaboration
 
-```js
-localStorage.setItem(
-    "typing-details",
-    JSON.stringify(details)
-);
-```
+I sometimes use AI tools such as ChatGPT as development assistants while working on these projects.
 
-#### Organizing JavaScript into functions
+AI is mainly used for:
 
-As the project became more complex, I focused on separating responsibilities into small functions such as:
+- Debugging and troubleshooting.
+- Explaining unfamiliar JavaScript or DOM APIs.
+- Reviewing code organization.
+- Suggesting refactoring approaches.
+- Discussing alternative implementation strategies.
+- Helping me understand concepts rather than simply copying solutions.
 
-- `startGame()`
-- `getRandomPassage()`
-- `renderPassage()`
-- `handleInput()`
-- `handleBackspace()`
-- `updateStats()`
-- `startTimer()`
-- `finishGame()`
-- `restartGame()`
+The implementation is reviewed, adapted, and tested as part of my own development process.
 
-This made the code easier to read, debug, and modify.
+For more details about AI collaboration, see the individual project README files where applicable.
 
-### Continued development
+## 🔗 Useful Links
 
-There are several areas I would like to improve in future versions:
+- [Frontend Mentor](https://www.frontendmentor.io/)
+- [My Frontend Mentor Profile](https://www.frontendmentor.io/profile/atef7534)
+- [My GitHub Profile](https://github.com/atef7534)
+- [This Repository](https://github.com/atef7534/Frontend-Mentor-Challenges-Solutions)
 
-- Add more typing modes and customizable test durations.
-- Improve keyboard accessibility and focus management.
-- Add more detailed performance statistics.
-- Track typing history instead of only the personal best.
-- Improve the result screen with additional performance insights.
-- Add more passage categories.
-- Further optimize the JavaScript structure as the application grows.
-- Add automated tests for the typing logic and score calculations.
+## 👨‍💻 Author
 
-### Useful resources
+**Atif Yasser**
 
-- [Frontend Mentor - Typing Speed Test](https://www.frontendmentor.io/challenges/typing-speed-test) - The original challenge, design, requirements, and provided assets.
-- [MDN - Document Object Model](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model) - Useful reference for DOM manipulation.
-- [MDN - EventTarget.addEventListener()](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener) - Helped with handling user interactions.
-- [MDN - Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) - Reference for loading the local passage data.
-- [MDN - Window.localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) - Reference for storing the personal best score.
-- [MDN - setInterval()](https://developer.mozilla.org/en-US/docs/Web/API/Window/setInterval) - Reference for implementing the typing timers.
+- GitHub: [@atef7534](https://github.com/atef7534)
+- Frontend Mentor: [@atef7534](https://www.frontendmentor.io/profile/atef7534)
 
-### AI Collaboration
+---
 
-I used ChatGPT as a development assistant during this project.
-
-I mainly used AI to:
-
-- Debug JavaScript issues.
-- Review and improve the organization of the code.
-- Refactor large sections into smaller functions.
-- Clarify JavaScript DOM APIs such as `replaceChild()` and `removeChild()`.
-- Discuss possible approaches for implementing interactive UI components.
-- Improve code readability and maintainability.
-
-AI was used as a support and learning tool rather than as a replacement for understanding the implementation. I reviewed the suggestions, adapted them to the project, and tested the resulting code.
-
-## Author
-
-- GitHub - [@atef7534](https://github.com/atef7534)
-- Frontend Mentor - [@atef7534](https://www.frontendmentor.io/profile/atef7534)
-
-## Acknowledgments
-
-- [Frontend Mentor](https://www.frontendmentor.io/) for providing the challenge, design, and starter assets.
-- The Frontend Mentor community for providing a great environment for practicing real-world frontend development.
+Built while practicing frontend development with [Frontend Mentor](https://www.frontendmentor.io/). 🚀
