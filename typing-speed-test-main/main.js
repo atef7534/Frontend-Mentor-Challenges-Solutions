@@ -34,7 +34,7 @@ let currentPosition = 0;
 let mode = getActiveButton(modeBtns);
 let difficulty = getActiveButton(levelsBtns);
 
-let typingDetails = loadTypingDetails();
+const typingDetails = loadTypingDetails();
 
 
 // Initialize Game

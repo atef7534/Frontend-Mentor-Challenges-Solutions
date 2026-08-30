@@ -11,17 +11,19 @@
     <header id="header">
       <div class="container">
         <div class="logo">
-          <picture>
-            <source
-              media="(max-width: 767px)"
-              srcset="./assets/images/logo-small.svg"
-            />
-            <img
-              src="./assets/images/logo-large.svg"
-              alt="A typing wired keyboard with a title and a small subheading."
-              class="logo-img"
-            />
-          </picture>
+          <h1>
+            <picture>
+              <source
+                media="(max-width: 767px)"
+                srcset="./assets/images/logo-small.svg"
+              />
+              <img
+                src="./assets/images/logo-large.svg"
+                alt="A typing wired keyboard with a title and a small subheading."
+                class="logo-img"
+              />
+            </picture>
+          </h1>
         </div>
         <div class="best">
           <img
@@ -57,16 +59,16 @@
             <div class="difficulty">
               <h2>Difficulty:</h2>
               <div class="levels">
-                <button class="active">Easy</button>
-                <button>Medium</button>
-                <button>Hard</button>
+                <button type="button" class="active">Easy</button>
+                <button type="button">Medium</button>
+                <button type="button">Hard</button>
               </div>
             </div>
             <div class="mode">
               <h2>Mode:</h2>
               <div class="levels">
-                <button class="active">Timed (60s)</button>
-                <button>Passage</button>
+                <button type="button" class="active">Timed (60s)</button>
+                <button type="button">Passage</button>
               </div>
             </div>
           </div>
@@ -78,7 +80,13 @@
       <section id="typing">
         <div class="container">
           <div class="text" id="text">
-            <input type="text" value="" class="hidden-input" />
+            <label for="hidden-input"></label>
+            <input
+              type="text"
+              value=""
+              class="hidden-input"
+              id="hidden-input"
+            />
             Coffee culture has evolved dramatically in recent decades. What was
             once a simple morning ritual has become an art form, with baristas
             crafting intricate latte designs and roasters sourcing beans from
@@ -153,23 +161,6 @@
         class="confetti-img"
       />
     </section>
-    <!-- Test Complete! Solid run. Keep pushing to beat your high score. WPM: -->
-    <!-- WPM -->
-    <!-- Accuracy: -->
-    <!-- Accuracy -->
-    <!-- Characters: -->
-    <!-- Correct/Incorrect -->
-
-    <!-- Go Again -->
-
-    <!-- Test Complete End -->
-
-    <!-- <footer class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
-      Coded by <a href="#">Your Name Here</a>.
-    </footer> -->
-
     <script src="./main.js" type="module"></script>
   </body>
 </html>
