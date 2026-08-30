@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend Mentor | Typing Speed Test</title>
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+  <body>
+    <!-- start header -->
+    <header id="header">
+      <div class="container">
+        <div class="logo">
+          <picture>
+            <source
+              media="(max-width: 767px)"
+              srcset="./assets/images/logo-small.svg"
+            />
+            <img
+              src="./assets/images/logo-large.svg"
+              alt="A typing wired keyboard with a title and a small subheading."
+              class="logo-img"
+            />
+          </picture>
+        </div>
+        <div class="best">
+          <img
+            src="./assets/images/icon-personal-best.svg"
+            alt="A crown icon"
+          />
+          <p>
+            <span class="personal-best">Personal best: </span>
+            <span class="best-only">Best: </span>
+            <span class="wpm highest-wpm">92 WPM</span>
+          </p>
+        </div>
+      </div>
+    </header>
+    <!-- end header -->
+
+    <main id="screen-1">
+      <!-- start settings -->
+      <section id="settings">
+        <div class="container">
+          <div class="status">
+            <div class="portion">
+              <h2>WPM: <span class="wpm current-wpm">0</span></h2>
+            </div>
+            <div class="portion portion-customized">
+              <h2>Accuracy: <span class="accuracy">100%</span></h2>
+            </div>
+            <div class="portion portion-customized">
+              <h2>Time: <span class="time">00:00</span></h2>
+            </div>
+          </div>
+          <div class="setup">
+            <div class="difficulty">
+              <h2>Difficulty:</h2>
+              <div class="levels">
+                <button class="active">Easy</button>
+                <button>Medium</button>
+                <button>Hard</button>
+              </div>
+            </div>
+            <div class="mode">
+              <h2>Mode:</h2>
+              <div class="levels">
+                <button class="active">Timed (60s)</button>
+                <button>Passage</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end settings -->
+
+      <!-- start typing -->
+      <section id="typing">
+        <div class="container">
+          <div class="text" id="text">
+            <input type="text" value="" class="hidden-input" />
+            Coffee culture has evolved dramatically in recent decades. What was
+            once a simple morning ritual has become an art form, with baristas
+            crafting intricate latte designs and roasters sourcing beans from
+            remote mountain villages. The humble cup of coffee now tells a
+            global story.
+          </div>
+        </div>
+        <div id="leave-test">
+          <div class="container">
+            <div id="start-typing">
+              <button class="start-typing-btn">Start Typing Test</button>
+              <p>Or click the text and start typing</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <button class="restart-test-btn hide">
+        Restart Test
+        <img src="./assets/images/icon-restart.svg" alt="" />
+      </button>
+      <!-- end typing -->
+    </main>
+
+    <!-- Test Complete Start -->
+    <section id="test-complete" class="hide">
+      <div class="container">
+        <div id="high-score">
+          <h2 class="celebration-icon">
+            <img
+              src="./assets/images/icon-new-pb.svg"
+              alt="A celebration icon"
+            />
+          </h2>
+          <h3 class="high-score-title">High Score Smashed!</h3>
+          <p class="congrats-sentence">
+            You're getting faster. That was incredible typing.
+          </p>
+          <ul class="stats">
+            <li class="wpm-stats">
+              WPM:
+              <span class="wpm-stats-value">96</span>
+            </li>
+            <li class="accuracy-stats">
+              Accuracy:
+              <span class="accuracy-stats-value">100%</span>
+            </li>
+            <li class="characters-stats">
+              Characters
+              <div>
+                <span class="characters-stats-value-c">120</span>/<span
+                  class="characters-stats-value-w"
+                  >5</span
+                >
+              </div>
+            </li>
+          </ul>
+          <div class="best-score-container">
+            <button id="beat-score-btn" class="best-score-btn">
+              Beat This Score
+              <img
+                src="./assets/images/icon-restart.svg"
+                alt="A restart svg icon."
+                class="confetti"
+              />
+            </button>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/images/pattern-confetti.svg"
+        alt="A pattern of Confetti"
+        class="confetti-img"
+      />
+    </section>
+    <!-- Test Complete! Solid run. Keep pushing to beat your high score. WPM: -->
+    <!-- WPM -->
+    <!-- Accuracy: -->
+    <!-- Accuracy -->
+    <!-- Characters: -->
+    <!-- Correct/Incorrect -->
+
+    <!-- Go Again -->
+
+    <!-- Test Complete End -->
+
+    <!-- <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </footer> -->
+
+    <script src="./main.js" type="module"></script>
+  </body>
+</html>

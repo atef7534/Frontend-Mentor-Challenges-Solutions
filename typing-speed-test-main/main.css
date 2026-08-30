@@ -1,0 +1,528 @@
+:root {
+  --main-bg: hsl(0, 0%, 7%);
+  --best-color: hsl(240, 1%, 59%);
+  --wpm-color: hsl(0, 0%, 100%);
+  --red-color: hsl(354, 63%, 57%);
+  --yellow-color: hsl(49, 85%, 70%);
+  --intense-blue: hsl(214, 100%, 55%);
+  --light-blue: hsl(210, 100%, 65%);
+  --green-color: hsl(140, 63%, 57%);
+  --reset-bg: hsl(0, 0%, 15%);
+}
+
+@font-face {
+  font-family: "Sora";
+  src: url("./assets/fonts/Sora/Sora-VariableFont_wght.ttf") format("ttf");
+  font-weight: 100 200 300 400 500 600 700 800 900;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Sora", sans-serif;
+  background-color: var(--main-bg);
+}
+
+/* handle .container on a variety of screen sizes */
+/* for small */
+.container {
+  width: 90%;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+/* start header styling */
+
+#header {
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+#header .container {
+  /* handle the display part */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#header .container .best {
+  display: flex;
+  gap: 8px;
+  color: var(--best-color);
+}
+
+#header .container .best img {
+  width: 18px;
+}
+
+#header .container .best .wpm {
+  color: var(--wpm-color);
+}
+
+#header .container .best .best-only {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  #header .container .best .personal-best {
+    display: none;
+  }
+
+  #header .container .best .best-only {
+    display: inline;
+  }
+}
+/* end header styling */
+
+#settings {
+}
+
+#settings .container {
+  /* adjust container's display */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--best-color);
+}
+
+@media screen and (max-width: 767px) {
+  #settings .container {
+    flex-direction: column;
+  }
+}
+
+#settings .container .status,
+#settings .container .setup {
+  /* adjust status display */
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 1170px) {
+  #settings .container .status,
+  #settings .container .setup {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #settings .container .status {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    padding: 20px 10px;
+  }
+
+  #settings .container .setup {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+#settings .container :is(.status, .setup) :is(.portion-customized, .mode) {
+  padding-left: 30px;
+}
+
+#settings
+  .container
+  :is(.status, .setup)
+  :is(.portion:not(:last-child), .difficulty) {
+  border-right: 1px solid var(--best-color);
+}
+
+#settings .container :is(.status, .setup) :is(.portion, .difficulty) {
+  position: relative;
+  padding-right: 30px;
+}
+
+@media screen and (max-width: 1170px) {
+  #settings
+    .container
+    :is(.status, .setup)
+    :is(.portion:not(:last-child), .difficulty) {
+    padding-right: 0;
+    border-right: none !important;
+  }
+}
+
+@media screen and (max-width: 1170px) {
+  #settings .container :is(.status, .setup) :is(.portion, .mode) {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #settings .container .setup > div {
+    width: 100%;
+  }
+
+  #settings .container .status .portion {
+    flex: 1;
+    text-align: center;
+  }
+  #settings .container .status .portion:not(:last-child) {
+    border-right: 1px solid var(--best-color) !important;
+  }
+
+  #settings .container .status div h2 {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 20px;
+  }
+
+  #settings .container .status div h2 span {
+    font-weight: 700;
+    font-size: 28px;
+    color: var(--wpm-color);
+  }
+}
+
+#settings .container :is(.status, .setup) h2 {
+  color: var(--best-color);
+  font-weight: 400;
+  font-size: 17px;
+}
+
+#settings .container .setup > div {
+  display: flex;
+  align-items: center;
+}
+
+.wpm,
+.accuracy,
+.time {
+  font-weight: 700;
+  font-size: 19px;
+  margin-left: 3px;
+}
+
+.wpm {
+  color: var(--wpm-color);
+}
+
+.accuracy {
+  color: var(--red-color);
+}
+
+.time {
+  color: var(--yellow-color);
+}
+
+.levels {
+  margin-left: 8px;
+}
+
+@media screen and (max-width: 767px) {
+  .levels {
+    display: flex;
+    gap: 5px;
+    width: 100%;
+  }
+
+  .levels button {
+    flex: 1;
+  }
+}
+
+.levels button {
+  background: none;
+  color: var(--wpm-color);
+  padding: 5px 10px;
+  border-radius: 6px;
+  border: 1px solid var(--best-color);
+  cursor: pointer;
+  font-size: 15px;
+  margin-top: 5px;
+}
+
+button.active {
+  border-color: var(--light-blue);
+  color: var(--light-blue);
+}
+
+/* end settings style */
+
+/* start typing style */
+
+#typing {
+  position: relative;
+}
+
+#typing > .container {
+  padding-block: 40px;
+  border-bottom: 1px solid var(--best-color);
+}
+
+#typing .container .text {
+  font-size: 45px;
+  color: var(--best-color);
+}
+
+#typing .container .text .hidden-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+#typing .container .text .letter.active {
+  border-left: 3px solid var(--yellow-color);
+  animation: blink 1s ease-in-out infinite;
+}
+
+@keyframes blink {
+  0% {
+    border-left-color: var(--yellow-color);
+  }
+  50% {
+    border-left-color: transparent;
+  }
+  100% {
+    border-left-color: var(--yellow-color);
+  }
+}
+.correct {
+  color: var(--green-color);
+}
+
+.wrong {
+  color: var(--red-color);
+  text-decoration: underline;
+}
+/* end typing style */
+
+/* start leave test */
+
+#leave-test {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, -0.7);
+  backdrop-filter: blur(5px);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#leave-test .container {
+  padding: 20px;
+  width: fit-content;
+  text-align: center;
+}
+
+.restart-test-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  margin: 20px auto;
+  background-color: var(--reset-bg);
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  color: var(--wpm-color);
+  cursor: pointer;
+}
+
+#leave-test .container button img {
+  width: 15px;
+}
+
+/* end leave test */
+.hide {
+  display: none !important;
+}
+
+#start-typing .start-typing-btn {
+  background-color: var(--intense-blue);
+  padding: 8px 15px;
+  border: none;
+  color: var(--wpm-color);
+  border-radius: 8px;
+  font-size: 17px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+#start-typing p {
+  color: var(--wpm-color);
+}
+
+/* test complete styles */
+#test-complete {
+  overflow: hidden;
+}
+
+#test-complete .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.celebration-icon {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.celebration-icon + h3 {
+  font-size: 35px;
+  color: var(--wpm-color);
+  line-height: 1.8;
+}
+
+.congrats-sentence {
+  color: var(--best-color);
+  font-size: 18px;
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0 40px;
+  gap: 10px;
+}
+
+@media screen and (max-width: 767px) {
+  .stats {
+    gap: 15px;
+    flex-direction: column;
+  }
+}
+
+.stats li {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 15px;
+  border: 1px solid hsl(240, 3%, 46%);
+  border-radius: 5px;
+  color: var(--best-color);
+  gap: 5px;
+  flex: 1;
+}
+
+@media screen and (max-width: 767px) {
+  .stats li {
+    width: 100%;
+  }
+}
+
+.stats li .wpm-stats-value {
+  color: var(--wpm-color);
+  font-weight: 700;
+  font-size: 19px;
+}
+
+.stats li .accuracy-stats-value {
+  color: var(--green-color);
+  font-weight: 700;
+  font-size: 19px;
+}
+
+.characters-stats-value-c {
+  color: var(--green-color);
+}
+
+@media screen and (max-width: 767px) {
+  .stats li .accuracy-stats-value {
+    color: var(--red-color);
+  }
+
+  .stats li span {
+    font-size: 25px !important;
+  }
+}
+
+.characters-stats div {
+  font-weight: 700;
+  color: var(--best-color);
+  font-size: 19px;
+}
+
+.characters-stats-value-w {
+  color: var(--red-color);
+}
+
+.best-score-container {
+  display: flex;
+  justify-content: center;
+}
+
+.best-score-btn {
+  background-color: var(--wpm-color);
+  color: black;
+  padding: 10px;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.best-score-btn img {
+  filter: invert(1);
+  width: 15px;
+}
+
+.confetti-img {
+  margin-bottom: -70px;
+}
+
+.confetti {
+  width: 100%;
+}
+
+.star-position-1 {
+  position: absolute;
+  right: 20%;
+  transform: translateY(-50%);
+}
+
+@media screen and (max-width: 767px) {
+  .star-position-1 {
+    right: 10%;
+    bottom: 10%;
+    width: 50px;
+  }
+}
+
+.star-position-2 {
+  position: absolute;
+  top: 20%;
+  left: 15%;
+}
+
+@media screen and (max-width: 767px) {
+  .star-position-2 {
+    top: 10%;
+    left: 10%;
+  }
+}
+
+.celebration-icon img {
+  border: 10px solid rgb(33 73 49);
+  border-radius: 50%;
+  outline: 10px solid rgb(21 39 29);
+}
+/* #test-complete .container */
