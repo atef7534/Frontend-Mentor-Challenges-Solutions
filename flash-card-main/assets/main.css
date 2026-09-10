@@ -1,0 +1,332 @@
+:root {
+  --gold-shade: #f6c74a;
+  --white-shade: #f7f3f0;
+  --pink-shade: #fe8be6;
+  --brown-shade: #311503;
+  --brown-shade-2: #3b1011;
+  --blue-shade: #93acec;
+  --green-shade: #47daca;
+  --red-shade: #ef73a0;
+  --pink-shade-2: #fd8ae5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--white-shade);
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Header */
+#header {
+  width: 90%;
+  margin: 0 auto;
+}
+
+#header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 20px;
+}
+
+#header .container .logo {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+#header .container .logo .logo-wrapper {
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  border-radius: 50%;
+  background-color: var(--gold-shade);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--brown-shade);
+  border-right-width: 3px;
+  border-bottom-width: 3px;
+}
+
+#header .container .logo .logo-img {
+  width: 90%;
+  height: 90%;
+}
+
+#header .container .logo .logo-title {
+  color: var(--brown-shade);
+  letter-spacing: -1px;
+  font-size: 1.5em;
+}
+
+#header .container .mode {
+  display: flex;
+  padding: 2px;
+  border-radius: 25px;
+  border: 1px solid var(--brown-shade);
+  border-right-width: 3px;
+  border-bottom-width: 3px;
+}
+
+#header .container .mode button {
+  background-color: transparent;
+  border-radius: 20px;
+  text-transform: capitalize;
+  font-size: 1em;
+  font-weight: 600;
+  color: var(--brown-shade);
+  cursor: pointer;
+  letter-spacing: -0.5px;
+  border: none;
+  padding: 10px 12px;
+  border: 1px solid transparent;
+}
+
+#header .container .mode button.active {
+  background-color: var(--gold-shade);
+  border-color: var(--brown-shade);
+}
+
+/* Mode */
+#flash-card {
+  margin-block: 20px;
+  width: 90%;
+  margin: 20px auto;
+}
+
+#flash-card .container {
+  border: 1px solid var(--brown-shade);
+  background-color: white;
+  border-right-width: 3px;
+  border-bottom-width: 3px;
+  border-radius: 10px;
+}
+
+#flash-card .container #show {
+}
+
+#flash-card .container #show .header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 50px;
+  border-bottom: 1px solid var(--brown-shade);
+  padding: 20px;
+}
+
+#flash-card .container #show .header .dropdown {
+  width: 300px;
+  position: relative;
+}
+
+#flash-card .container #show .header .dropdown .dropdown-trigger {
+  display: flex;
+  align-items: center;
+  padding: 10px 10px 10px 20px;
+  border: 1px solid var(--brown-shade);
+  width: fit-content;
+  border-radius: 25px;
+  cursor: pointer;
+  position: relative;
+  width: 100%;
+}
+
+#flash-card .container #show .header .dropdown .dropdown-trigger span {
+  position: relative;
+  display: block;
+  padding-right: 30px;
+  font-size: 19px;
+  font-weight: 500;
+  color: var(--brown-shade);
+  width: 100%;
+}
+
+#flash-card .container #show .header .dropdown .dropdown-trigger span::before {
+  content: "";
+  position: absolute;
+  height: 7px;
+  width: 7px;
+  border: 2px solid var(--brown-shade);
+  transform: rotate(45deg) translateY(80%);
+  border-top: none;
+  border-left: none;
+  right: 0;
+}
+
+#flash-card .container #show .header .dropdown .dropdown-menu {
+  display: none;
+}
+
+#flash-card .container #show .header .dropdown .dropdown-menu.open {
+  display: block;
+  padding: 10px;
+  border: 2px solid var(--brown-shade);
+  border-radius: 10px;
+  border-top-color: transparent;
+  margin-top: -3px;
+  margin-left: 14px;
+  width: 90%;
+  background-color: white;
+  position: absolute;
+  top: calc(100% + 2.6px);
+  left: 0;
+}
+
+#flash-card .container #show .header .dropdown .dropdown-menu .dropdown-item {
+  padding: 10px;
+  font-weight: 500;
+  font-size: 19px;
+  cursor: pointer;
+  border-bottom: 1px solid var(--brown-shade);
+  transition: 0.2s linear;
+}
+
+#flash-card
+  .container
+  #show
+  .header
+  .dropdown
+  .dropdown-menu
+  .dropdown-item:last-of-type {
+  border-bottom: none;
+}
+
+#flash-card
+  .container
+  #show
+  .header
+  .dropdown
+  .dropdown-menu
+  .dropdown-item:hover {
+  color: var(--gold-shade);
+  border-color: var(--gold-shade);
+}
+
+#flash-card .container #show .header .hide-mastered {
+}
+
+#flash-card .container #show .header .hide-mastered button {
+  color: var(--brown-shade);
+  font-size: 21px;
+  border: none;
+  cursor: pointer;
+  background-color: white;
+  font-weight: 500;
+  display: block;
+  position: relative;
+  padding-left: 30px;
+}
+
+#flash-card .container #show .header .hide-mastered button span {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border: 1px solid var(--brown-shade);
+  border-radius: 5px;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+#flash-card .container #show .header .hide-mastered button span.active {
+  background-color: var(--brown-shade);
+}
+
+#flash-card .container #show .header .shuffle {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#flash-card .container #show .header .shuffle .shuffle-btn {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  border: 1px solid var(--brown-shade);
+  width: fit-content;
+  background-color: white;
+  border-radius: 25px;
+  cursor: pointer;
+  position: relative;
+  font-size: 17px;
+  color: var(--brown-shade);
+  gap: 10px;
+}
+
+#flash-card .container #stats {
+  padding: 20px;
+}
+
+#flash-card #stats > .title {
+  padding-bottom: 20px;
+  color: var(--brown-shade);
+  text-transform: capitalize;
+}
+
+#flash-card #stats .stats-list {
+}
+
+#flash-card #stats .stats-item {
+  display: flex;
+  border: 1px solid var(--brown-shade);
+  border-right-width: 3px;
+  border-bottom-width: 3px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+#flash-card #stats .stats-item .title {
+  display: flex;
+  flex-direction: column;
+  text-transform: capitalize;
+  font-weight: 500;
+  color: var(--brown-shade);
+  padding: 20px;
+  gap: 10px;
+  background-color: white;
+  border-radius: 10px 0 0 10px;
+  flex: 3;
+}
+
+#flash-card #stats .stats-item > .title > .number {
+  font-size: 40px;
+  font-weight: 900;
+}
+
+#flash-card #stats .stats-item .stats-icon {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 10px 10px 0;
+}
+
+#flash-card #stats .stats-item .stats-icon i {
+  font-size: 25px;
+}
+
+.bg-blue-shade {
+  background-color: var(--blue-shade);
+}
+
+.bg-green-shade {
+  background-color: var(--green-shade);
+}
+
+.bg-red-shade {
+  background-color: var(--red-shade);
+}
+
+.bg-pink-shade {
+  background-color: var(--pink-shade);
+}
