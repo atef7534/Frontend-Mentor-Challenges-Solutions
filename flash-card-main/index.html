@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flash Cards - Main</title>
+    <link rel="stylesheet" href="./assets/main.css" />
+    <link rel="stylesheet" href="./assets/all.min.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header id="header">
+      <div class="container">
+        <div class="logo">
+          <div class="logo-wrapper">
+            <img
+              src="./imgs/components/logo.png"
+              alt="3 cards"
+              class="logo-img"
+            />
+          </div>
+          <h1 class="logo-title">Flashcard</h1>
+        </div>
+        <div class="mode">
+          <button class="study-mode active">study mode</button>
+          <button class="all-cards">all cards</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mode -->
+    <section id="flash-card">
+      <div class="container">
+        <div id="show">
+          <div class="header">
+            <div class="dropdown">
+              <div class="dropdown-trigger">
+                <span>All Categories</span>
+              </div>
+              <div class="dropdown-menu">
+                <div class="dropdown-item">Egypt</div>
+                <div class="dropdown-item">Germany</div>
+                <div class="dropdown-item">USA</div>
+                <div class="dropdown-item">Canada</div>
+              </div>
+            </div>
+            <div class="hide-mastered">
+              <button>
+                <span></span>
+                Hide Mastered
+              </button>
+            </div>
+            <div class="shuffle">
+              <button class="shuffle-btn">
+                <i class="fa-solid fa-shuffle"></i> Shuffle
+              </button>
+            </div>
+          </div>
+        </div>
+        <div id="stats">
+          <h2 class="title">study statistics</h2>
+          <ul class="stats-list">
+            <li class="stats-item bg-blue-shade">
+              <h3 class="title">
+                Total Cards
+                <span class="number">40</span>
+              </h3>
+              <div class="stats-icon">
+                <i class="fa-solid fa-layer-group"></i>
+              </div>
+            </li>
+            <li class="stats-item bg-green-shade">
+              <h3 class="title">
+                Mastered
+                <span class="number">11</span>
+              </h3>
+              <div class="stats-icon">
+                <i class="fa-solid fa-brain"></i>
+              </div>
+            </li>
+            <li class="stats-item bg-red-shade">
+              <h3 class="title">
+                in progress
+                <span class="number">21</span>
+              </h3>
+              <div class="stats-icon">
+                <i class="fa-solid fa-book-open"></i>
+              </div>
+            </li>
+            <li class="stats-item bg-pink-shade">
+              <h3 class="title">
+                not started
+                <span class="number">8</span>
+              </h3>
+              <div class="stats-icon">
+                <i class="fa-solid fa-inbox"></i>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <script src="./main.js"></script>
+  </body>
+</html>
