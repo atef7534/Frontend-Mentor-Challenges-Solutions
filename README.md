@@ -6,14 +6,16 @@ Each challenge is implemented from the provided design and includes its own sour
 
 ## 🚀 Projects
 
-| Project | Preview | Technologies | Live Demo | Source Code | Challenge |
-| --- | --- | --- | --- | --- | --- |
-| **Social Links Profile** | ![Social Links Profile](./social-links-profile-main/preview.jpg) | HTML, CSS | [Live](https://atef7534.github.io/Frontend-Mentor-Challenges-Solutions/social-links-profile-main/) | [Code](./social-links-profile-main/) | [Challenge](https://www.frontendmentor.io/challenges/social-links-profile-ec5e2e9a6b) |
-| **QR Code Component** | ![QR Code Component](./qr-code-component-main/preview.jpg) | HTML, CSS | [Live](https://atef7534.github.io/Frontend-Mentor-Challenges-Solutions/qr-code-component-main/) | [Code](./qr-code-component-main/) | [Challenge](https://www.frontendmentor.io/challenges/qr-code-component-iux_sIO_H) |
-| **Blog Preview Card** | ![Blog Preview Card](./blog-preview-card-main/preview.jpg) | HTML, CSS | [Live](https://atef7534.github.io/Frontend-Mentor-Challenges-Solutions/blog-preview-card-main/) | [Code](./blog-preview-card-main/) | [Challenge](https://www.frontendmentor.io/challenges/blog-preview-card-HJ_0pTmQG) |
-| **Order Summary Component** | ![Order Summary Component](./order-summary-component-main/preview.jpg) | HTML, CSS | [Live](https://atef7534.github.io/Frontend-Mentor-Challenges-Solutions/order-summary-component-main/) | [Code](./order-summary-component-main/) | [Challenge](https://www.frontendmentor.io/challenges/order-summary-component-QlPmajDUj) |
-| **Results Summary Component** | ![Results Summary Component](./results-summary-component-main/screenshot.png) | HTML, CSS | [Live](https://atef7534.github.io/Frontend-Mentor-Challenges-Solutions/results-summary-component-main/) | [Code](./results-summary-component-main/) | [Challenge](https://www.frontendmentor.io/challenges/results-summary-component-CE_K6s0maV) |
-| **Typing Speed Test** | ![Typing Speed Test](./typing-speed-test-main/preview.jpg) | HTML, CSS, JavaScript | [Live](https://atef7534.github.io/Frontend-Mentor-Challenges-Solutions/typing-speed-test-main/) | [Code](./typing-speed-test-main/) | [Challenge](https://www.frontendmentor.io/challenges/typing-speed-test) |
+| Project                       | Preview                                                                                       | Technologies          | Live Demo                                                                                               | Source Code                               | Challenge                                                                                  |
+| ----------------------------- | --------------------------------------------------------------------------------------------- | --------------------- | ------------------------------------------------------------------------------------------------------- | ----------------------------------------- | ------------------------------------------------------------------------------------------ |
+| **Social Links Profile**      | ![Social Links Profile](./social-links-profile-main/preview.jpg)                              | HTML, CSS             | [Live](https://atef7534.github.io/Frontend-Mentor-Challenges-Solutions/social-links-profile-main/)      | [Code](./social-links-profile-main/)      | [Challenge](https://www.frontendmentor.io/challenges/social-links-profile-ec5e2e9a6b)      |
+| **QR Code Component**         | ![QR Code Component](./qr-code-component-main/preview.jpg)                                    | HTML, CSS             | [Live](https://atef7534.github.io/Frontend-Mentor-Challenges-Solutions/qr-code-component-main/)         | [Code](./qr-code-component-main/)         | [Challenge](https://www.frontendmentor.io/challenges/qr-code-component-iux_sIO_H)          |
+| **Blog Preview Card**         | ![Blog Preview Card](./blog-preview-card-main/preview.jpg)                                    | HTML, CSS             | [Live](https://atef7534.github.io/Frontend-Mentor-Challenges-Solutions/blog-preview-card-main/)         | [Code](./blog-preview-card-main/)         | [Challenge](https://www.frontendmentor.io/challenges/blog-preview-card-HJ_0pTmQG)          |
+| **Order Summary Component**   | ![Order Summary Component](./order-summary-component-main/preview.jpg)                        | HTML, CSS             | [Live](https://atef7534.github.io/Frontend-Mentor-Challenges-Solutions/order-summary-component-main/)   | [Code](./order-summary-component-main/)   | [Challenge](https://www.frontendmentor.io/challenges/order-summary-component-QlPmajDUj)    |
+| **Results Summary Component** | ![Results Summary Component](./results-summary-component-main/screenshot.png)                 | HTML, CSS             | [Live](https://atef7534.github.io/Frontend-Mentor-Challenges-Solutions/results-summary-component-main/) | [Code](./results-summary-component-main/) | [Challenge](https://www.frontendmentor.io/challenges/results-summary-component-CE_K6s0maV) |
+| **Typing Speed Test**         | ![Typing Speed Test](./typing-speed-test-main/preview.jpg)                                    | HTML, CSS, JavaScript | [Live](https://atef7534.github.io/Frontend-Mentor-Challenges-Solutions/typing-speed-test-main/)         | [Code](./typing-speed-test-main/)         | [Challenge](https://www.frontendmentor.io/challenges/typing-speed-test)                    |
+| **Flash Cards**               | —                                                                                             | HTML, CSS, JavaScript | [Live](https://atef7534.github.io/Frontend-Mentor-Challenges-Solutions/flash-card-main/)                | [Code](./flash-card-main/)                | —                                                                                          |
+| **Grid Landing Page**         | ![Grid Landing Page](./grid-landing-page-main/screenshots/desktop-size-bridge-collective.png) | HTML, CSS, JavaScript | [Live](https://atef7534.github.io/Frontend-Mentor-Challenges-Solutions/grid-landing-page-main/)         | [Code](./grid-landing-page-main/)         | [Challenge](https://www.frontendmentor.io/)                                                |
 
 ## 📚 About the Repository
 
@@ -64,6 +66,8 @@ Frontend-Mentor-Challenges-Solutions/
 ├── order-summary-component-main/
 ├── results-summary-component-main/
 ├── typing-speed-test-main/
+├── flash-card-main/
+├── grid-landing-page-main/
 │
 └── README.md
 ```
