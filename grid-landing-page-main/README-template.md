@@ -1,123 +1,226 @@
-# Frontend Mentor - Grid landing page solution
+# Frontend Mentor - Grid Landing Page
 
-This is a solution to the [Grid landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/grid-landing-page). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+![Grid Landing Page Preview](./screenshots/desktop-size-bridge-collective.png)
 
-## Table of contents
+A responsive landing page built as a solution to a Frontend Mentor challenge.
 
-- [Overview](#overview)
-  - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
-  - [AI Collaboration](#ai-collaboration)
-- [Author](#author)
-- [Acknowledgments](#acknowledgments)
+The project focuses on creating a clean, grid-based layout with responsive behavior, an interactive navigation menu, hover states, and different layouts for desktop and mobile screen sizes.
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
+## 🚀 Live Demo
 
-## Overview
+[View the live project](https://atef7534.github.io/Frontend-Mentor-Challenges-Solutions/grid-landing-page-main/)
 
-### The challenge
+## 📂 Repository
 
-Users should be able to:
+[View the source code](https://github.com/atef7534/Frontend-Mentor-Challenges-Solutions/tree/main/grid-landing-page-main)
 
-- View the optimal layout for the page depending on their device's screen size
-- See hover and focus states for all interactive elements on the page
-- Open and close the navigation menu at any screen size (optional JavaScript)
+## 🎯 The Challenge
 
-### Screenshot
+The goal was to build a landing page for a fictional education nonprofit called **Bridge Collective** and make the implementation as close as possible to the provided design.
 
-![](./screenshot.jpg)
+The page contains:
 
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
+- A responsive navigation header
+- A hero section with a headline and description
+- A 2×2 grid of impact statistics
+- Interactive hover states
+- A slide-in navigation panel
+- A background overlay when the navigation is open
+- A responsive mobile layout
+- A footer section
 
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
+The project was built from scratch using the provided design as a reference.
 
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
+## 🛠️ Technologies Used
 
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
-
-### Links
-
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
-
-## My process
-
-### Built with
-
-- Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
+- HTML5
+- CSS3
+- JavaScript (ES6+)
 - CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
+- Flexbox
+- CSS Media Queries
+- DOM Manipulation
+- Google Fonts — Inter
 
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+## 📱 Responsive Design
 
-### What I learned
+The layout adapts to different screen sizes.
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+### Desktop
 
-To see how you can add code snippets, see below:
+The main content is divided into three columns:
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+```text
+┌──────────────────┬──────────────┬──────────────┐
+│                  │              │              │
+│                  │    Stat 1    │    Stat 3    │
+│   Hero Content   │              │              │
+│                  ├──────────────┼──────────────┤
+│                  │    Stat 2    │    Stat 4    │
+│                  │              │              │
+└──────────────────┴──────────────┴──────────────┘
 ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
+### Mobile
 
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+The layout switches to a single-column structure, with the hero section followed by the statistics cards.
 
-### Continued development
+The CSS uses a breakpoint at **767px** to adapt the layout for smaller screens.
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+## 🍔 Interactive Navigation
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+The navigation menu is implemented using JavaScript.
 
-### Useful resources
+Clicking the menu icon toggles the `active` class on:
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- `.panel-links`
+- `.overlay`
 
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+This causes the navigation panel to slide into the viewport using a CSS transform and transition.
 
-### AI Collaboration
+The menu contains:
 
-Describe how you used AI tools (if any) during this project. This helps demonstrate your ability to work effectively with AI assistants.
+- About
+- Our Work
+- Partners
+- Annual Report
+- Donate
 
-- What tools did you use (e.g., ChatGPT, Claude, GitHub Copilot)?
-- How did you use them (e.g., debugging, generating boilerplate, brainstorming solutions)?
-- What worked well? What didn't?
+## 🎨 Styling
 
-**Note: Delete this note and the content above if you didn't use AI, or replace with your own experience.**
+The project uses **Inter** as its primary font and a blue-based visual design.
 
-## Author
+Some of the main styling techniques used include:
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- CSS Grid for the main page structure
+- Flexbox for alignment and component layouts
+- CSS transitions for the navigation animation
+- Media queries for responsive layouts
+- Hover states for statistic cards
+- CSS pseudo-elements for decorative elements
+- CSS custom sizing and spacing to reproduce the provided design
 
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
+The main layout is implemented with CSS Grid, while the statistic cards use Flexbox internally.
 
-## Acknowledgments
+## 🧠 What I Practiced
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
+This project helped me practice several frontend development concepts:
 
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+### CSS Grid
+
+I used CSS Grid to create the three-column desktop layout and switch to a single-column layout on mobile devices.
+
+### Responsive Design
+
+I practiced adapting the layout, typography, spacing, navigation, and statistic cards for smaller screens.
+
+### Flexbox
+
+Flexbox was used for:
+
+- Header alignment
+- Statistic card layouts
+- Hero content alignment
+- Footer alignment
+- Navigation elements
+
+### JavaScript DOM Manipulation
+
+JavaScript was used to select DOM elements and toggle classes when the navigation icon is clicked.
+
+The implementation keeps the interaction simple by using the `active` class to control the visual state.
+
+### CSS Transitions
+
+The navigation panel uses `transform: translateX()` together with a transition to create the sliding menu effect.
+
+## 📁 Project Structure
+
+```text
+grid-landing-page-main/
+│
+├── assets/
+│   └── images/
+│
+├── screenshots/
+│   ├── desktop-size-bridge-collective.png
+│   └── ...
+│
+├── .gitignore
+├── index.html
+├── main.css
+├── main.js
+├── README-template.md
+└── README.md
+```
+
+### Main Files
+
+**`index.html`**
+
+Contains the semantic structure of the landing page, including the header, navigation, hero section, statistics, and footer.
+
+**`main.css`**
+
+Contains the complete styling, responsive layouts, grid structure, animations, hover states, and mobile adaptations.
+
+**`main.js`**
+
+Controls the opening and closing of the navigation panel and its overlay.
+
+## 🔍 Key Features
+
+- ✅ Responsive desktop layout
+- ✅ Responsive mobile layout
+- ✅ CSS Grid-based structure
+- ✅ Flexbox layouts
+- ✅ Interactive navigation menu
+- ✅ Sliding navigation animation
+- ✅ Background overlay
+- ✅ Hover effects
+- ✅ Responsive typography
+- ✅ Inter font
+- ✅ Semantic HTML structure
+- ✅ Mobile-first considerations
+
+## 📸 Screenshots
+
+### Desktop
+
+![Desktop Screenshot](./screenshots/desktop-size-bridge-collective.png)
+
+### Mobile
+
+![Mobile Screenshot](./screenshots/mobile-size-bridge-collective.png)
+
+## 🤖 AI Collaboration
+
+I sometimes use AI tools such as ChatGPT as a development assistant while working on my projects.
+
+AI may be used for:
+
+- Debugging and troubleshooting
+- Explaining unfamiliar concepts
+- Reviewing code
+- Discussing alternative implementation approaches
+- Improving code organization
+
+The final implementation is reviewed, adapted, and tested as part of my own development process.
+
+## 🔗 Links
+
+- [Frontend Mentor](https://www.frontendmentor.io/)
+- [My GitHub Profile](https://github.com/atef7534)
+- [Repository](https://github.com/atef7534/Frontend-Mentor-Challenges-Solutions)
+- [Live Project](https://atef7534.github.io/Frontend-Mentor-Challenges-Solutions/grid-landing-page-main/)
+
+## 👨‍💻 Author
+
+**Atif Yasser**
+
+- GitHub: [@atef7534](https://github.com/atef7534)
+- Frontend Mentor: [@atef7534](https://www.frontendmentor.io/profile/atef7534)
+
+---
+
+Built as part of my frontend development practice with [Frontend Mentor](https://www.frontendmentor.io/). 🚀
