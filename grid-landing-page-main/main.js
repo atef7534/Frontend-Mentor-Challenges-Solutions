@@ -1,14 +1,12 @@
-const panelLinksEl = document.querySelector('.panel-links')
-const iconEl = document.querySelector('.icon')
-const overlayEl = document.querySelector('.overlay')
+const panelLinksEl = document.querySelector('.panel-links');
+const menuToggleEl = document.querySelector('.menu-toggle');
+const overlayEl = document.querySelector('.overlay');
 
+const toggleMenu = () => {
+  const isActive = panelLinksEl.classList.toggle('active');
+  overlayEl.classList.toggle('active');
+  menuToggleEl.setAttribute('aria-expanded', isActive);
+};
 
-iconEl.addEventListener('click', () => {
-  if (panelLinksEl.classList.contains('active')) {
-    panelLinksEl.classList.remove('active')
-    overlayEl.classList.remove('active')
-  } else {
-    panelLinksEl.classList.add('active')
-    overlayEl.classList.add('active')
-  }
-})
+menuToggleEl.addEventListener('click', toggleMenu);
+overlayEl.addEventListener('click', toggleMenu);

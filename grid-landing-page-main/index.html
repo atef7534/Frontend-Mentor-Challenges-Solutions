@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./main.css" />
-    <!-- displays site properly based on user's device -->
 
     <link
       rel="icon"
@@ -23,14 +22,14 @@
   </head>
   <body>
     <!-- Nav -->
-    <header id="header">
+    <header class="main-header">
       <h1>Bridge Collective</h1>
       <aside class="floating-panel">
-        <div class="icon">
+        <button class="menu-toggle" aria-label="Toggle Menu" aria-expanded="false">
           <span class="line"></span>
           <span class="line"></span>
-        </div>
-        <div class="panel-links">
+        </button>
+        <nav class="panel-links">
           <ul>
             <li><a href="#about">About</a></li>
             <li><a href="#our-work">Our Work</a></li>
@@ -38,24 +37,24 @@
             <li><a href="#annual-report">Annual Report</a></li>
             <li><a href="#donate">Donate</a></li>
           </ul>
-        </div>
+        </nav>
         <div class="overlay"></div>
       </aside>
     </header>
 
     <!-- Landing -->
-    <section id="landing">
-      <div>
+    <section class="landing-page">
+      <div class="hero-content">
         <h2>A classroom for every child.</h2>
         <p>
           We fund the schools, train the teachers, and measure what works — so
           every child we reach today becomes a graduate tomorrow.
         </p>
       </div>
-      <div class="col">
+      <div class="col stats-col">
         <div class="cell">
           <div class="upper">
-            <img src="./assets/images/icon-sparkle.svg" alt="A sparkle icon" />
+            <img src="./assets/images/icon-sparkle.svg" alt="" aria-hidden="true" />
             <h3>2.4M</h3>
           </div>
           <div class="lower">
@@ -69,7 +68,7 @@
           <div class="upper">
             <img
               src="./assets/images/icon-arrow-right.svg"
-              alt="An Arrow right icon"
+              alt="" aria-hidden="true"
             />
             <h3>38K</h3>
           </div>
@@ -81,10 +80,10 @@
           </div>
         </div>
       </div>
-      <div class="col">
+      <div class="col stats-col">
         <div class="cell">
           <div class="upper">
-            <img src="./assets/images/icon-plus.svg" alt="A plus icon" />
+            <img src="./assets/images/icon-plus.svg" alt="" aria-hidden="true" />
             <h3>1,284</h3>
           </div>
           <div class="lower">
@@ -98,11 +97,11 @@
           <div class="upper">
             <img
               src="./assets/images/icon-trending-up.svg"
-              alt="A treding up icon"
+              alt="" aria-hidden="true"
             />
             <h3 class="special-upper">
               3.1
-              <img src="./assets/images/icon-close.svg" alt="A close icon" />
+              <img src="./assets/images/icon-close.svg" alt="" aria-hidden="true" />
             </h3>
           </div>
           <div class="lower">
@@ -116,7 +115,7 @@
     </section>
 
     <!-- Footer -->
-    <footer id="footer">
+    <footer class="main-footer">
       <h4>© 2026 Bridge Collective</h4>
       <p>Registered charity 12345678</p>
     </footer>

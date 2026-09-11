@@ -1,3 +1,14 @@
+:root {
+  --primary-color: #2754fd;
+  --primary-hover: hsl(228, 100%, 60%);
+  --border-color: #dcdcdc59;
+  --text-main: white;
+  --text-muted: hsl(224, 100%, 95%);
+  --overlay-bg: #0000006d;
+  --panel-width: 401px;
+  --header-height: 56.8px; /* Approximated from existing calc */
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -13,87 +24,84 @@ body {
   font-family: "Inter", sans-serif;
 }
 
-/* start header */
-#header {
-  background-color: #2754fd;
-  font-family: "Inter", sans-serif;
+/* Header */
+.main-header {
+  background-color: var(--primary-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 50px;
-  border-bottom: 1px solid #dcdcdc59;
+  border-bottom: 1px solid var(--border-color);
   position: relative;
   max-width: 100%;
 }
 
-#header h1 {
-  color: white;
+.main-header h1 {
+  color: var(--text-main);
   font-weight: 400;
   font-size: 0.8rem;
   position: relative;
 }
 
-#header h1::before {
+.main-header h1::before {
   content: "";
   position: absolute;
   width: 8px;
   height: 8px;
-  background-color: white;
+  background-color: var(--text-main);
   border-radius: 50%;
   top: 50%;
   transform: translateY(-50%);
   left: -12px;
 }
 
-#header .icon {
+.menu-toggle {
   display: flex;
   flex-direction: column;
   width: 15px;
   gap: 5px;
   cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
 }
 
-#header .icon span {
+.menu-toggle span {
   height: 2px;
-  background-color: white;
+  background-color: var(--text-main);
 }
 
-/* #header aside {
-} */
-
-#header aside .panel-links {
+.panel-links {
   position: absolute;
-  background-color: #2754fd;
-  width: 401px;
-  height: calc(100vh - 56.8px);
+  background-color: var(--primary-color);
+  width: var(--panel-width);
+  height: calc(100vh - var(--header-height));
   top: calc(100% + 1px);
   right: 0;
   padding: 40px 25px;
   transform: translateX(100%);
   transition: transform 0.32s ease;
+  z-index: 10;
 }
 
 @media screen and (max-width: 767px) {
-  #header aside .panel-links {
+  .panel-links {
     width: 100%;
-    border-left: 1px solid #dcdcdc59;
+    border-left: 1px solid var(--border-color);
   }
 }
 
-#header aside .panel-links.active {
+.panel-links.active {
   transform: translateX(0);
 }
 
-/* #header aside .panel-links ul {
-} */
-
-#header aside .panel-links ul li {
+.panel-links ul li {
   margin-top: 10px;
 }
 
-#header aside .panel-links ul li a {
+.panel-links ul li a {
   text-decoration: none;
-  color: white;
+  color: var(--text-main);
   font-size: 22px;
   display: block;
   width: fit-content;
@@ -102,64 +110,63 @@ body {
 }
 
 @media screen and (max-width: 767px) {
-  #header aside .panel-links ul li a {
+  .panel-links ul li a {
     margin-right: auto;
     font-size: 3rem;
     margin-top: 20px;
   }
 }
 
-#header aside .panel-links ul li a:hover {
-  border-bottom: 1px solid #dcdcdc59;
+.panel-links ul li a:hover {
+  border-bottom: 1px solid var(--border-color);
 }
 
 .overlay {
-  width: calc(100% - 400px);
+  width: calc(100% - var(--panel-width));
   position: absolute;
   top: calc(100% + 1px);
-  right: calc(-1 * 100% - 400px);
-  background-color: #0000006d;
-  height: calc(100vh - 56.8px);
+  right: calc(-1 * 100% - var(--panel-width));
+  background-color: var(--overlay-bg);
+  height: calc(100vh - var(--header-height));
   transition: 0.3s ease all;
+  z-index: 5;
 }
 
-#header .overlay.active {
-  right: 400px;
+.overlay.active {
+  right: var(--panel-width);
 }
 
 @media screen and (max-width: 767px) {
-  #header .overlay.active {
+  .overlay.active {
     display: none;
   }
 }
 
-#landing {
+/* Landing Section */
+.landing-page {
   display: grid;
-  grid-template-columns: minmax(400px, 1fr) minmax(200px, 400px) minmax(
-      200px,
-      400px
-    );
-  height: calc(100vh - 113.3px);
-  background-color: #2754fd;
+  grid-template-columns: minmax(400px, 1fr) minmax(200px, 400px) minmax(200px, 400px);
+  min-height: calc(100vh - 113.3px); /* Kept for design match, but using min-height */
+  background-color: var(--primary-color);
 }
 
 @media screen and (max-width: 767px) {
-  #landing {
+  .landing-page {
     grid-template-columns: 1fr;
-    height: 100%;
+    height: auto;
   }
 }
 
-#landing > div {
-  border-right: 1px solid #dcdcdc59;
-  color: white;
+.landing-page > div {
+  border-right: 1px solid var(--border-color);
+  color: var(--text-main);
 }
 
-#landing > div.col {
-  background-color: #2754fd;
+.landing-page > .col {
+  background-color: var(--primary-color);
 }
 
-#landing > div:first-child {
+.hero-content {
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -168,14 +175,14 @@ body {
 }
 
 @media screen and (max-width: 767px) {
-  #landing > div:first-child {
+  .hero-content {
     padding: 50px;
-    border-bottom: 1px solid #dcdcdc59;
-    height: calc(100vh - 56.8px);
+    border-bottom: 1px solid var(--border-color);
+    min-height: calc(100vh - var(--header-height));
   }
 }
 
-#landing > div:first-child h2 {
+.hero-content h2 {
   font-size: 3.6rem;
   width: 60%;
   font-weight: 500;
@@ -184,49 +191,46 @@ body {
 }
 
 @media screen and (max-width: 767px) {
-  #landing > div:first-child h2 {
+  .hero-content h2 {
     width: 100%;
   }
 }
 
-#landing > div:first-child p {
+.hero-content p {
   width: 60%;
   line-height: 1.6;
-  color: hsl(224, 100%, 95%);
+  color: var(--text-muted);
 }
 
 @media screen and (max-width: 767px) {
-  #landing > div:first-child p {
+  .hero-content p {
     width: 100%;
     font-size: 1.4rem;
   }
 }
 
-/* #landing .col {
-} */
-
-#landing .col .cell {
+.stats-col .cell {
   height: 50%;
   padding: 30px;
-  border-bottom: 1px solid #dcdcdc59;
+  border-bottom: 1px solid var(--border-color);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
 @media screen and (max-width: 767px) {
-  #landing .col .cell {
+  .stats-col .cell {
     height: 400px;
-    border-top: 1px solid #dcdcdc59;
+    border-top: 1px solid var(--border-color);
   }
 }
 
 .cell:hover {
-  background-color: hsl(228, 100%, 60%);
+  background-color: var(--primary-hover);
   cursor: pointer;
 }
 
-#landing .col .cell:last-child {
+.stats-col .cell:last-child {
   border: none;
 }
 
@@ -258,30 +262,31 @@ body {
   display: flex;
   flex-direction: column;
   font-size: 0.8rem;
-  color: hsl(224, 100%, 95%);
+  color: var(--text-muted);
 }
 
-#footer {
-  border-top: 1px solid #dcdcdc59;
-  background-color: #2754fd;
+/* Footer */
+.main-footer {
+  border-top: 1px solid var(--border-color);
+  background-color: var(--primary-color);
   padding: 20px 40px;
-  color: white;
+  color: var(--text-main);
   display: flex;
   justify-content: space-between;
 }
 
 @media screen and (max-width: 767px) {
-  #footer {
+  .main-footer {
     flex-direction: column;
     gap: 5px;
   }
 }
 
-#footer h4 {
+.main-footer h4 {
   font-weight: 400;
   font-size: 0.8rem;
 }
 
-#footer p {
+.main-footer p {
   font-size: 0.8rem;
 }
