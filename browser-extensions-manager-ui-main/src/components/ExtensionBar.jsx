@@ -11,10 +11,10 @@ export default function ExtensionBar({ mode, setMode }) {
   return (
     <nav
       className={`d-flex-between-center ${
-        mode === "dark" ? "light-mode" : "dark-mode"
+        mode === "dark" ? "dark-mode" : "light-mode"
       }`}
     >
-      <img src={mode === "dark" ? lightLogo : darkLogo} alt="Extensions logo" />
+      <img src={mode === "dark" ? darkLogo : lightLogo} alt="Extensions logo" />
 
       <button
         className={`mode ${mode}`}
