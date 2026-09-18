@@ -3,5 +3,5 @@ import { defineConfig } from "vite";
 
 export default defineConfig({
   plugins: [react()],
-  base: "/Frontend-Mentor-Challenges-Solutions/browser-extensions-manager-ui-main/",
+  base: "/Frontend-Mentor-Challenges-Solutions/",
 });
